@@ -4,4 +4,9 @@
 		<title>Sklep internetowy - zrób szybko i tanio zakupy</title>
 
 		<link rel="stylesheet" href="css/bootstrap.css" />
-	</head>
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.js"></script>
+
+</head>
