@@ -20,14 +20,23 @@
 				<form method="post" action="login.php">
 					<input type="text" name="login" placeholder="login" class="form-control"/> <br />
 					<input type="password" name="password" placeholder="hasło" class="form-control"/> <br />
-					<input type="submit" class="btn btn-primary" value="Zaloguj się" name="login"/>
-					<input type="submit" class="btn btn-primary" value="Zarejestruj sie" name="register" />
+					<input type="submit" class="btn btn-primary" value="Zaloguj się"/>
+					<input type="button" class="btn btn-primary" value="Zarejestruj sie" id="register" />
 				</form>
                         </div>
 
 
 			</div>
 		</div>
+	</div>
+
+	<div id="register_dialog">
+		<form method="post" action="register.php">
+			<input type="text" name="login" placeholder="login" class="form-control"/> <br />
+			<input type="password" name="password" placeholder="hasło" class="form-control"/> <br />
+			<input type="submit" class="btn btn-primary" value="Załóż konto"/>
+
+		</form>
 	</div>
 </body>
 </html>

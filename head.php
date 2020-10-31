@@ -9,5 +9,6 @@
 
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
+		<script src="js/index_script.js"></script>
 
 </head>
