@@ -20,7 +20,8 @@
 				<form method="post" action="login.php">
 					<input type="text" name="login" placeholder="login" class="form-control"/> <br />
 					<input type="password" name="password" placeholder="hasło" class="form-control"/> <br />
-					<input type="submit" class="btn btn-primary" value="Zaloguj się" />
+					<input type="submit" class="btn btn-primary" value="Zaloguj się" name="login-script"/>
+					<input type="submit" class="btn btn-primary" value="Zarejestruj sie" name="register-script" />
 				</form>
                         </div>
 
