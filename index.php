@@ -15,7 +15,7 @@
 			<div class="col-xs-6 col-md-4">
 			
 			<div class="jumbotron">
-                                <h1>Zaloguj się</h1>
+                                <h3>Zaloguj się</h3>
                         </div>
 
 
