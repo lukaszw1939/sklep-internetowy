@@ -12,7 +12,14 @@
 			</div>
 
 			</div>
-			<div class="col-xs-6 col-md-4">2</div>
+			<div class="col-xs-6 col-md-4">
+			
+			<div class="jumbotron">
+                                <h1>Zaloguj się</h1>
+                        </div>
+
+
+			</div>
 		</div>
 	</div>
 </body>
