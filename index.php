@@ -15,7 +15,15 @@
 			<div class="col-xs-6 col-md-4">
 			
 			<div class="jumbotron">
-                                <h3>Zaloguj się</h3>
+				<h3>Zaloguj się</h3>
+
+				<form method="post">
+					<p>Login:</p>
+					<input type="text" name="login" />
+					<p>Hasło:</p>
+					<input type="password" name="password" />
+
+				</form>
                         </div>
 
 
