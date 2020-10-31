@@ -1,9 +1,9 @@
 <?php
 include("db_login.php");
 
-if($_POST["login-script"]){
+if($_POST["login"]){
 
-}elseif($_POST["register-script"]){
+}elseif($_POST["register"]){
 
 }
 ?>
