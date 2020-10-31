@@ -17,12 +17,10 @@
 			<div class="jumbotron">
 				<h3>Zaloguj się</h3>
 
-				<form method="post">
-					<p>Login:</p>
-					<input type="text" name="login" />
-					<p>Hasło:</p>
-					<input type="password" name="password" />
-
+				<form method="post" action="login.php">
+					<input type="text" name="login" placeholder="login" class="form-control"/> <br />
+					<input type="password" name="password" placeholder="hasło" class="form-control"/> <br />
+					<input type="submit" class="btn btn-primary" value="Zaloguj się" />
 				</form>
                         </div>
 
