@@ -8,7 +8,7 @@
 			<div class="jumbotron">
   				<h1>Sklep Internetowy - LukaszenkoShop</h1>
   				<p>Dodaj produkt, którego pragniesz się pozbyć. Pomożemy Ci sprzedać go szybko i za dobrą cenę</p>
-  				<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  				<p><a class="btn btn-primary btn-lg" role="button">Dodaj produkt</a></p>
 			</div>
 
 			</div>
