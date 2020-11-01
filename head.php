@@ -3,12 +3,13 @@
 		<meta charset="utf-8" />
 		<title>Sklep internetowy - zrób szybko i tanio zakupy</title>
 
-		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/jquery-ui.css" />
-		<link rel="stylesheet" href="css/style.css" />		
+		<link rel="stylesheet" href="/sklep-internetowy/css/bootstrap.css" />
+		<link rel="stylesheet" href="/sklep-internetowy/css/jquery-ui.css" />
+		<link rel="stylesheet" href="/sklep-internetowy/css/style.css" />		
 
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery-ui.js"></script>
-		<script src="js/index_script.js"></script>
+		<script src="/sklep-internetowy/js/jquery.js"></script>
+		<script src="/sklep-internetowy/js/jquery-ui.js"></script>
+		<script src="/sklep-internetowy/js/index_script.js"></script>
+		<script src="/sklep-internetowy/js/panel_script.js"></script>
 
 </head>

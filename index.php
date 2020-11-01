@@ -6,8 +6,8 @@
 			<div class="col-xs-12 col-sm-6 col-md-8">
 
 			<div class="jumbotron">
-  				<h1>Sklep Internetowy - LukaszenkoShop</h1>
-  				<p>Dodaj produkt, którego pragniesz się pozbyć. Pomożemy Ci sprzedać go szybko i za dobrą cenę</p>
+  				<h1>LukaszenkoShop</h1>
+  				<p>Dodaj produkt, którego pragniesz się pozbyć. <br /> Pomożemy Ci sprzedać go szybko i za dobrą cenę</p>
   				<p><a class="btn btn-primary btn-lg" role="button">Dodaj produkt</a></p>
 			</div>
 
