@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Czas generowania: 30 Paź 2020, 09:01
+-- Czas generowania: 01 Lis 2020, 20:47
 -- Wersja serwera: 10.4.14-MariaDB
 -- Wersja PHP: 7.4.11
 
@@ -39,6 +39,13 @@ CREATE TABLE `address` (
   `number_local` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `address`
+--
+
+INSERT INTO `address` (`id_address`, `city`, `town`, `voivodeship`, `district`, `postcode`, `street`, `number_house`, `number_local`) VALUES
+(1, 'Siedlce', 'Siedlce', 'Mazowieckie', NULL, '08-110', 'Dreszera', 11, 22);
+
 -- --------------------------------------------------------
 
 --
@@ -59,16 +66,24 @@ CREATE TABLE `category` (
 CREATE TABLE `clients` (
   `id_client` int(11) NOT NULL,
   `id_address` int(11) NOT NULL,
-  `login` varchar(30) DEFAULT NULL,
-  `password` varchar(40) DEFAULT NULL,
+  `login` varchar(100) DEFAULT NULL,
+  `password` varchar(500) DEFAULT NULL,
   `name_business` varchar(60) DEFAULT NULL,
   `regon` varchar(14) DEFAULT NULL,
   `nip` varchar(10) DEFAULT NULL,
   `surname` varchar(40) DEFAULT NULL,
   `names` varchar(100) DEFAULT NULL,
   `type_clients` varchar(20) DEFAULT NULL,
-  `phone` varchar(11) DEFAULT NULL
+  `phone` varchar(11) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `clients`
+--
+
+INSERT INTO `clients` (`id_client`, `id_address`, `login`, `password`, `name_business`, `regon`, `nip`, `surname`, `names`, `type_clients`, `phone`, `avatar`) VALUES
+(2, 1, 'lukaszw1212', '$2y$10$sco2UpWCso40Nc0oIlh75.rvBsDM/veQiVTIC/GwHMC6UK5RBPqlq', NULL, NULL, NULL, 'Waszczuk', 'Łukasz', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -261,7 +276,7 @@ ALTER TABLE `workers`
 -- AUTO_INCREMENT dla tabeli `address`
 --
 ALTER TABLE `address`
-  MODIFY `id_address` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_address` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `category`
@@ -273,7 +288,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT dla tabeli `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `gallery`
