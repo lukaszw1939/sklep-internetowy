@@ -1,6 +1,6 @@
 <?php
 	include("db_login.php");
-	var_dump($_POST);
+	
 	$login = $_POST["login"];
 	$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 	
