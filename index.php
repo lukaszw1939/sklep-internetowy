@@ -30,7 +30,7 @@
 		</div>
 	</div>
 
-	<div id="register_dialog">
+	<div id="register_dialog" title="Załóż konto">
 		<form method="post" action="register.php">
 			<input type="text" name="login" placeholder="login" class="form-control"/> <br />
 			<input type="password" name="password" placeholder="hasło" class="form-control"/> <br />
