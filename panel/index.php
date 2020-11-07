@@ -5,10 +5,8 @@
 	include("../head.php");
 	if($_SESSION["zalogowany"]==1){
 ?>
-<div class="row">
-	<div class="col-xs-12 col-sm-6 col-md-8">
-	
-	</div>
+<div class="row" style="width: 100%;">
+	<div class="col-xs-12 col-sm-6 col-md-8"><div id="content"></div></div>
 	<div class="col-xs-6 col-md-4">
 		<div class="list-group">
 			<a class="list-group-item active" id="konto" href="#konto"">
@@ -18,7 +16,7 @@
 				else
 					echo $_SESSION["user_name"] . " " . $_SESSION["user_last_name"];
 			?></a>
-			<a class="list-group-item">Konto</a>
+			<a class="list-group-item" id="twoje-produkty" href="#">Twoje produkty</a>
 		</div>
 	</div>
 </div>
