@@ -7,9 +7,9 @@ $(function(){
 		$('#konto_dialog').dialog("open");
 	});
 	
-	$("#twoje-produkty").click(function(){
+	$("#produkty").click(function(){
 		$.ajax({
-			url: '../panel/blogi.php'.
+			url: '/sklep-internetowy/panel/blogi.php'.
 			success: function(data){
 				$('#content').html(data);
 			}

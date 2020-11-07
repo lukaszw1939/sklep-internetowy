@@ -18,7 +18,7 @@
 		$wynik_zapytania = mysqli_fetch_array($zapytanie);
 		
 		if($password = $wynik_zapytania[0]){
-			$zapytanie = mysqli_query($conn1, "SELECT id_client, login, names, surname, avatar FROM clients WHERE login = '$login'");
+			$zapytanie = mysqli_query($conn1, "SELECT id_client, login, names, surname, avatar, founder FROM clients WHERE login = '$login'");
 			$wynik_zapytania = mysqli_fetch_array($zapytanie);
 			
 			$_SESSION["zalogowany"] = 1;
@@ -27,6 +27,7 @@
 			$_SESSION["user_name"] = $wynik_zapytania[2];
 			$_SESSION["user_last_name"] = $wynik_zapytania[3];
 			$_SESSION["user_avatar"] = $wynik_zapytania[4];
+			$_SESSION["user_owner_shop"] = $wynik_zapytania[5];
 			
 			header("Location: panel/index.php");
 		}else{

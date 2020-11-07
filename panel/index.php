@@ -9,14 +9,15 @@
 	<div class="col-xs-12 col-sm-6 col-md-8"><div id="content"></div></div>
 	<div class="col-xs-6 col-md-4">
 		<div class="list-group">
-			<a class="list-group-item active" id="konto" href="#konto"">
+			<a class="list-group-item active" id="konto" href="#">
 			<?php 
 				if($_SESSION["user_name"] == "")
 					echo $_SESSION["user_login"];
 				else
 					echo $_SESSION["user_name"] . " " . $_SESSION["user_last_name"];
-			?></a>
-			<a class="list-group-item" id="twoje-produkty" href="#">Twoje produkty</a>
+			?>
+			</a>
+			<a class="list-group-item" id="produkty" href="#">Twoje produkty</a>
 		</div>
 	</div>
 </div>
