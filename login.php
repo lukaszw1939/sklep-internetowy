@@ -6,18 +6,18 @@
 	include("head.php");
 	
 	$login = $_POST["login"];
-	$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+	$password = $_POST["password"];
 	
-	$zapytanie = mysqli_query($conn1, "SELECT login FROM clients WHERE login = '$login'");
+	$zapytanie = mysqli_query($conn1, "SELECT login, password FROM clients WHERE login = '$login'");
 	$wynik_zapytania = mysqli_fetch_array($zapytanie);
 	
 	if($wynik_zapytania[0] != $login){
 		echo "User nie istnieje";
 	}else{
-		$zapytanie = mysqli_query($conn1, "SELECT password FROM clients WHERE login = '$login'");
-		$wynik_zapytania = mysqli_fetch_array($zapytanie);
+		$zapytanie2 = mysqli_query($conn1, "SELECT password FROM clients WHERE login = '$login'");
+		$wynik_zapytania2 = mysqli_fetch_array($zapytanie2);
 		
-		if($password = $wynik_zapytania[0]){
+		if(password_verify($password, $wynik_zapytania2[0])){
 			$zapytanie = mysqli_query($conn1, "SELECT id_client, login, names, surname, avatar, founder FROM clients WHERE login = '$login'");
 			$wynik_zapytania = mysqli_fetch_array($zapytanie);
 			
@@ -30,7 +30,8 @@
 			$_SESSION["user_owner_shop"] = $wynik_zapytania[5];
 			
 			header("Location: panel/index.php");
-		}else{
+		}else
+		{
 			echo "Błędne hasło";
 		}
 	}

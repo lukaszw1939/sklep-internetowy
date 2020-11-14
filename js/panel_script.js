@@ -9,9 +9,9 @@ $(function(){
 	
 	$("#produkty").click(function(){
 		$.ajax({
-			url: '/sklep-internetowy/panel/blogi.php'.
-			success: function(data){
-				$('#content').html(data);
+			url : "../sklep-internetowy/panel/blogi.php",
+			success : function(data){
+				$("#content").html(data);
 			}
 		});
 	});

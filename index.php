@@ -21,7 +21,7 @@
 					<input type="text" name="login" placeholder="login" class="form-control"/> <br />
 					<input type="password" name="password" placeholder="hasło" class="form-control"/> <br />
 					<input type="submit" class="btn btn-primary" value="Zaloguj się"/>
-					<input type="button" class="btn btn-primary" value="Zarejestruj sie" id="register"/>
+					<input type="button" class="btn btn-primary" value="Zarejestruj sie" id="register" name="login"/>
 				</form>
                         </div>
 
