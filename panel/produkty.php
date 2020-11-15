@@ -7,7 +7,7 @@ if($_SESSION["user_owner_shop"] == ''){
 
 <h3><center>Nie posiadasz żadnego przedmiotu wystawionego w sklepie. Dodaj produkt do sklepu.</center></h3>
 
-<form class="form-horizontal" method="post" action="zaloz_bloga.php">
+<form class="form-horizontal" method="post" action="zaloz_sklep.php">
 
 	<div class="form-group">
 		<label for="inputEmail13" class="col-sm-2 control-label">Identyfikator kategorii</label>
@@ -36,7 +36,7 @@ if($_SESSION["user_owner_shop"] == ''){
 	
 	<div class="form-group">
 		<label for="inputEmail13" class="col-sm-2 control-label">Zdjęcie</label>
-		<div class="col-sm-10"><input type="text" name="photo" class="form-control" /></div>
+		<div class="col-sm-10"><input type="file" name="photo" class="form-control" /></div>
 	</div>
 	
 	<div class="form-group">
@@ -62,5 +62,15 @@ if($_SESSION["user_owner_shop"] == ''){
 	<input type="submit" class="form-control btn btn-primary" id="inputEmail113" value="Dodaj produkt" />
 </form>
 <?php
+}else{
+	$user_login = $_SESSION["user_login"];
+	$zapytanie = mysqli_query($conn1, "SELECT id_category, name_product, type, version, description, photo,
+	price_netto, price_brutto, percent_vat, id_producents FROM products WHERE founder = '$user_login'");
+	$wynik_zapytania = mysqli_fetch_array($zapytanie);
+	
+	echo "<h3>Dodałeś produkt o nazwie:" . $wynik_zapytania[1] . "</h3>";
+	if(file_exists("../blogi/" . $wynik_zapytania[1] . "/config.xml")){
+		echo "Plik konfiguracyjny istnieje!";
+	}
 }
 ?>
