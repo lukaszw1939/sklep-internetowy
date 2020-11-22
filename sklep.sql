@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Czas generowania: 01 Lis 2020, 20:47
+-- Czas generowania: 22 Lis 2020, 19:31
 -- Wersja serwera: 10.4.14-MariaDB
 -- Wersja PHP: 7.4.11
 
@@ -57,6 +57,14 @@ CREATE TABLE `category` (
   `name_category` varchar(60) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `category`
+--
+
+INSERT INTO `category` (`id_category`, `name_category`) VALUES
+(3, 'router'),
+(4, 'switch');
+
 -- --------------------------------------------------------
 
 --
@@ -75,15 +83,16 @@ CREATE TABLE `clients` (
   `names` varchar(100) DEFAULT NULL,
   `type_clients` varchar(20) DEFAULT NULL,
   `phone` varchar(11) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL
+  `avatar` varchar(255) DEFAULT NULL,
+  `founder` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `clients`
 --
 
-INSERT INTO `clients` (`id_client`, `id_address`, `login`, `password`, `name_business`, `regon`, `nip`, `surname`, `names`, `type_clients`, `phone`, `avatar`) VALUES
-(2, 1, 'lukaszw1212', '$2y$10$sco2UpWCso40Nc0oIlh75.rvBsDM/veQiVTIC/GwHMC6UK5RBPqlq', NULL, NULL, NULL, 'Waszczuk', 'Łukasz', NULL, NULL, '');
+INSERT INTO `clients` (`id_client`, `id_address`, `login`, `password`, `name_business`, `regon`, `nip`, `surname`, `names`, `type_clients`, `phone`, `avatar`, `founder`) VALUES
+(6, 1, 'lukaszw1212', '$2y$10$pQNuMbvdGI3fAPj2KfJOZeF3W4YHj/8tO1YuCqTH7sae.f8EXZEWO', NULL, NULL, NULL, 'Waszczuk', 'Łukasz', NULL, NULL, NULL, 'Router');
 
 -- --------------------------------------------------------
 
@@ -138,6 +147,14 @@ CREATE TABLE `producents` (
   `name_producent` varchar(70) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `producents`
+--
+
+INSERT INTO `producents` (`id_producent`, `name_producent`) VALUES
+(1, 'Lenovo'),
+(3, 'Huawei');
+
 -- --------------------------------------------------------
 
 --
@@ -155,8 +172,16 @@ CREATE TABLE `products` (
   `price_netto` double UNSIGNED DEFAULT NULL,
   `price_brutto` double UNSIGNED DEFAULT NULL,
   `percent_vat` double UNSIGNED DEFAULT NULL,
-  `id_producents` int(11) NOT NULL
+  `id_producents` int(11) NOT NULL,
+  `founder` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `products`
+--
+
+INSERT INTO `products` (`id_product`, `id_category`, `name_product`, `type`, `version`, `description`, `photo`, `price_netto`, `price_brutto`, `percent_vat`, `id_producents`, `founder`) VALUES
+(5, 3, 'Router', 'V4', '5.90', 'Fajny Router', 0x6b7369617a6b692e6a7067, 400, 500, 1, 3, 'lukaszw1212');
 
 -- --------------------------------------------------------
 
@@ -282,13 +307,13 @@ ALTER TABLE `address`
 -- AUTO_INCREMENT dla tabeli `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `gallery`
@@ -312,13 +337,13 @@ ALTER TABLE `ordering_products`
 -- AUTO_INCREMENT dla tabeli `producents`
 --
 ALTER TABLE `producents`
-  MODIFY `id_producent` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT dla tabeli `specimen`
