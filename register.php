@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	include("db_login.php");
 	
 	$login = $_POST["login"];

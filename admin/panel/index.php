@@ -17,11 +17,9 @@
 					echo $_SESSION["user_name"] . " " . $_SESSION["user_last_name"];
 			?>
 			</a>
-			<a class="list-group-item" id="produkty" href="#">Produkty wystawione na sprzedaż</a>
+			<a class="list-group-item" id="produkty" href="#">Dodawanie produktów</a>
 			<a class="list-group-item" id="lista-produktow" href="#">Lista produktów</a>
-			<a class="list-group-item" id="dodaj_do_koszyka" href="#">Dodaj produkt do koszyka</a>
-			<a class="list-group-item" id="produkty_czekające" href="#">Produkty czekające na realizację</a>
-			<a class="list-group-item" id="produkty_zaakceptowane" href="#">Produkty zaakceptowane</a>
+			<a class="list-group-item" id="produkty_czekające" href="#">Produkty czekające na akceptację</a>
 		</div>
 	</div>
 </div>

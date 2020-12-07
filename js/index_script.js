@@ -6,4 +6,5 @@ $(function(){
 	$("#register").click(function(){
 		$('#register_dialog').dialog("open");
 	});
+	
 });
